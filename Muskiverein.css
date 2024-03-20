@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    sans-serif;
+
+  background-image: url("Default_Its_a_white_background_just_with_black_music_notes_it_0.jpg"); /* Pfad zu Ihrem Bild */
+  background-position: center center; /* Zentriert das Bild */
+  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+  background-attachment: fixed; /* Bild bleibt beim Scrollen an der Stelle */
+  background-size: cover; /* Stellt sicher, dass das Bild den gesamten Bildschirm bedeckt */
+}
+
+#site-header,
+#site-footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/*=======================================Hier ist die Navigationsleiste==============================*/
+
+#navigation {
+  position: -webkit-sticky; /* Für Safari */
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: flex-start; /* Ordnet die Items linksbündig an */
+  border: none; /* Korrigiert die Farbe (vollständig transparent war vorher #00000000) */
+  padding: 5px; /* Etwas Abstand innen für die Navigationsleiste */
+  background-color: rgba(255, 255, 255, 0.6); /* Weiß mit 50% Transparenz */
+}
+
+#navigation ul {
+  display: flex;
+  list-style-type: none; /* Entfernt Bullet-Points */
+  margin: 0; /* Anpassung für Flexbox */
+  padding: 0; /* Entfernt den Innenabstand */
+  width: 100%; /* Nimmt die volle Breite des Containers ein */
+}
+
+#navigation li {
+  float: left; /* Ordnet die Listenelemente linksbündig an */
+  padding-left: 20px;
+}
+
+#navigation li a {
+  background-color: #4caf50; /* Grüne Hintergrundfarbe */
+  color: white; /* Weiße Textfarbe */
+  padding: 10px 20px; /* Abstand oben/unten, rechts/links */
+  text-align: center; /* Text zentrieren */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  display: inline-block; /* Erlaubt die Anwendung von Padding und Zentrierung */
+  font-size: 16px; /* Schriftgröße */
+  margin: 4px 20px; /* Abstand zu anderen Elementen */
+  cursor: pointer; /* Verändert den Mauszeiger zu einem Klickzeiger */
+  border: none; /* Kein Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  transition: transform 0.3s ease; /* Animiert die Transformation */
+}
+
+#navigation li a:hover {
+  background-color: #45a049; /* Dunklerer Grünton beim Darüberfahren */
+  transform: scale(1.1); /* Vergrößert den Button um 10% */
+}
+
+/*=======================================Hier ist die Navigationsleiste==============================*/
+
+/*=======================================Hier ist der Inhalt der ersten Section==============================*/
+
+#main-content {
+  padding: 20px;
+}
+
+#about {
+  text-align: center;
+  padding-left: 350px;
+  padding-right: 350px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(255, 255, 255, 1); /* Weiß mit 50% Transparenz */
+}
+
+#Überschrift {
+  padding-bottom: 40px;
+  color: rgba(0, 0, 0, 0.87); /* Dunkelgrau für hohen Kontrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Fügt einen weichen Schatten hinzu */
+  font-size: 40px; /* Empfohlene Mindestgröße für Webtext */
+  line-height: 1.5; /* Verbessert die Lesbarkeit */
+}
+
+#WerSindWirText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Zentriert die Elemente vertikal, falls gewünscht */
+  text-align: justify;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 17px; /* Empfohlene Mindestgröße für Webtext */
+  line-height: 1.8; /* Verbessert die Lesbarkeit */
+  color: rgba(0, 0, 0, 0.87); /* Dunkelgrau für hohen Kontrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Fügt einen weichen Schatten hinzu */
+}
+
+#Inhalt {
+  flex: 3; /* Gibt dem Text mehr Platz */
+  padding: 0px 20px; /* Fügt etwas Platz um den Text hinzu, damit er nicht direkt an den Bildern klebt */
+}
+
+.image-left,
+.image-right {
+  flex: 1; /* Ermöglicht den Bildern, flexibel zu sein, aber Sie können auch feste Breiten verwenden */
+  margin-right: -20px;
+  margin-left: 20px;
+}
+
+/*=======================================Hier ist der Inhalt der ersten Section==============================*/
+
+/* ========================================Hier ist der Banner eingefügt========================================= */
+
+#banner {
+  background-image: url("Default_its_a_banner_for_a_website_its_full_of_music_instrumen_0.jpg");
+  display: flex;
+  flex-direction: column; /* Stapelt die Elemente vertikal */
+  align-items: center; /* Zentriert die Elemente horizontal */
+  padding: 20px;
+}
+
+#titel {
+  font-weight: 800;
+  text-decoration: wavy;
+  font-size: 65px;
+  background-color: rgba(255, 255, 255, 0.6); /* Weiß mit 50% Transparenz */
+  color: red; /* Textfarbe */
+  padding: 62.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Fügt einen weichen Schatten hinzu */
+}
+
+/* ========================================Hier ist der Banner eingefügt========================================= */
+
+/*============================================ Hier ist die Fusszeile================================================ */
+
+footer {
+  background-color: #f0f0f0; /* Beispiel für einen Fußzeilen-Hintergrund */
+  padding: 10px;
+}
+
+/*=============================BUTTON STYLES=====================================*/
+a.ButtonStyle {
+  background-color: #4caf50; /* Grüne Hintergrundfarbe */
+  color: white; /* Weiße Textfarbe */
+  padding: 15px 20px; /* Abstand oben/unten, rechts/links */
+  text-align: center; /* Text zentrieren */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  display: inline-block; /* Erlaubt die Anwendung von Padding und Zentrierung */
+  font-size: 16px; /* Schriftgröße */
+  margin: 40px 20px; /* Abstand zu anderen Elementen */
+  cursor: pointer; /* Verändert den Mauszeiger zu einem Klickzeiger */
+  border: none; /* Kein Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  transition: transform 0.3s ease; /* Animiert die Transformation */
+}
+
+a.ButtonStyle:hover {
+  background-color: #45a049; /* Dunklerer Grünton beim Darüberfahren */
+  transform: scale(1.1); /* Vergrößert den Button um 10% */
+}
+
+/*===================================Header mitscrollen lassen=========================*/
+
+#site-header {
+  position: -webkit-sticky; /* Für Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
