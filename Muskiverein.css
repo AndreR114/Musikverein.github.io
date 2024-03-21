@@ -30,11 +30,9 @@ body {
 /*=======================================Hier ist die Navigationsleiste==============================*/
 
 #navigation {
-  position: -webkit-sticky;
+  /*position: -webkit-sticky;*/
   /* Für Safari */
-  position: sticky;
-  top: 0;
-  z-index: 500;
+
   display: flex;
   /* Aktiviert Flexbox */
   justify-content: flex-start;
@@ -45,6 +43,21 @@ body {
   /* Etwas Abstand innen für die Navigationsleiste */
   background-color: rgba(255, 255, 255, 0.6);
   /* Weiß mit 50% Transparenz */
+}
+/*============JS Klasse die funktional hinzugefügt wir==============*/
+
+.sticky-nav {
+  position: fixed;
+  width: 100%;
+  max-width: 1863px; /* oder die Breite Ihres Containers */
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: whitesmoke !important; /* Neue Hintergrundfarbe, wenn sticky */
+  transition: transform 0.5s ease-out, background-color 0.5s ease-out; /* Fügt einen sanften Übergang für Transformation und Hintergrundfarbe hinzu */
+  z-index: 999;
 }
 
 #navigation ul {
@@ -97,6 +110,7 @@ body {
   /* Dunklerer Grünton beim Darüberfahren */
   transform: scale(1.1);
   /* Vergrößert den Button um 10% */
+  color: black;
 }
 
 /*=======================================Hier ist die Navigationsleiste==============================*/
@@ -137,13 +151,12 @@ body {
   /* Zentriert die Elemente vertikal, falls gewünscht */
   text-align: left;
   font-style: normal;
-  font-size: 17px;
+  font-size: 20px;
   /* Empfohlene Mindestgröße für Webtext */
   line-height: 1.8;
   /* Verbessert die Lesbarkeit */
   color: rgba(0, 0, 0, 0.87);
   /* Dunkelgrau für hohen Kontrast */
-
 }
 
 #Inhalt {
@@ -160,6 +173,12 @@ body {
   text-align: center;
 }
 
+.image-right img,
+.image-left img {
+  width: 50%; /* Die Bilder füllen 50% der Breite ihres Containers aus */
+  height: auto; /* Passt die Höhe automatisch an */
+}
+
 /*=======================================Hier ist der Inhalt der ersten Section==============================*/
 
 /* ========================================Hier ist der Banner eingefügt========================================= */
@@ -169,9 +188,12 @@ body {
   flex-direction: row;
   /* Stapelt die Elemente horizontal */
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   /* Zentriert die Elemente horizontal */
   padding: 20px;
+  transition: opacity 0.5s, visibility 0.5s; /* Sanfter Übergang für Opazität und Sichtbarkeit */
+  opacity: 1; /* Standardmäßig sichtbar */
+  visibility: visible;
 }
 
 #titel {
@@ -180,10 +202,10 @@ body {
   font-size: 65px;
   /*background-color: rgba(255, 255, 255, 0.6);*/
   /* Weiß mit 50% Transparenz */
-  color: #A7C1D9;
+  color: #f2ec99;
   /* Textfarbe */
   padding: 62.5px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
   /* Fügt einen weichen Schatten hinzu */
 }
 
@@ -230,14 +252,5 @@ a.ButtonStyle:hover {
   /* Dunklerer Grünton beim Darüberfahren */
   transform: scale(1.1);
   /* Vergrößert den Button um 10% */
-}
-
-/*===================================Header mitscrollen lassen=========================*/
-
-#site-header {
-  position: -webkit-sticky;
-  /* Für Safari */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  color: black;
 }
