@@ -25,6 +25,6 @@ function stickNavigation() {
     navigation.style.transform = "translateY(0%)";
   } else {
     navigation.classList.remove("sticky-nav");
-    navigation.style.transform = "translateY(-100%)";
+    //navigation.style.transform = "translateY(-100%)";
   }
 }
