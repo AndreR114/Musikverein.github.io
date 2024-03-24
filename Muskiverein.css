@@ -45,20 +45,24 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   /* Weiß mit 50% Transparenz */
 }
+
 /*============JS Klasse die funktional hinzugefügt wir==============*/
 
 .sticky-nav {
   position: fixed;
   width: 100%;
-  max-width: 1863px; /* oder die Breite Ihres Containers */
+  max-width: 1880px;
+  /* oder die Breite Ihres Containers */
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
   left: 0;
   right: 0;
   top: 0;
-  background-color: whitesmoke !important; /* Neue Hintergrundfarbe, wenn sticky */
-  transition: transform 0.5s ease-out, background-color 0.5s ease-out; /* Fügt einen sanften Übergang für Transformation und Hintergrundfarbe hinzu */
+  background-color: whitesmoke !important;
+  /* Neue Hintergrundfarbe, wenn sticky */
+  transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+  /* Fügt einen sanften Übergang für Transformation und Hintergrundfarbe hinzu */
   z-index: 999;
 }
 
@@ -81,8 +85,10 @@ body {
   padding-left: 20px;
 }
 
+/*===Hier werden die Nav-Elemenste gestaltet===*/
+
 #navigation li a {
-  background-color: #4caf50;
+  background-color: #502ee7e5;
   /* Grüne Hintergrundfarbe */
   color: white;
   /* Weiße Textfarbe */
@@ -109,71 +115,87 @@ body {
 }
 
 #navigation li a:hover {
-  background-color: #45a049;
+  background-color: #300bd8;
   /* Dunklerer Grünton beim Darüberfahren */
   transform: scale(1.1);
   /* Vergrößert den Button um 10% */
   color: black;
 }
 
-/*=======================================Hier ist die Navigationsleiste==============================*/
+/*=======================================Hier ist der Navigationsleistenberch zu ende==============================*/
 
 /*=======================================Hier ist der Inhalt der ersten Section==============================*/
 
 #main-content {
   padding: 20px;
+
 }
 
 #about {
-  text-align: center;
-  padding-left: 350px;
-  padding-right: 350px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  display: flex;
+  /* Ermöglicht eine horizontale Anordnung der Kinder */
+  flex-direction: row;
+  /* Horizontale Anordnung der Kinder */
+  padding: 50px;
   background-color: rgba(255, 255, 255, 1);
-  /* Weiß mit 50% Transparenz */
 }
 
 #Überschrift {
+  width: 100%;
   padding-bottom: 40px;
   color: rgba(0, 0, 0, 0.87);
-  /* Dunkelgrau für hohen Kontrast */
-
-  /* Fügt einen weichen Schatten hinzu */
   font-size: 40px;
-  /* Empfohlene Mindestgröße für Webtext */
   line-height: 1.5;
-  /* Verbessert die Lesbarkeit */
+  text-align: center;
+  /* Zentriert die Überschrift */
+
 }
 
 #WerSindWirText {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  /* Zentriert die Elemente vertikal, falls gewünscht */
-  text-align: left;
-  font-style: normal;
-  font-size: 20px;
-  /* Empfohlene Mindestgröße für Webtext */
-  line-height: 1.5;
-  /* Verbessert die Lesbarkeit */
-  color: rgba(0, 0, 0, 0.87);
-  /* Dunkelgrau für hohen Kontrast */
+  flex-direction: column;
+  /* Stellt sicher, dass der Text vertikal angeordnet ist */
+  align-items: flex-end;
+  /* Text linksbündig ausgerichtet */
+  max-width: 30%;
 }
 
 #BilderBereich {
-  flex: 1; /* Oder ein anderes Verhältnis, je nach Bedarf */
-  /* Stil für Bilderbereich, z.B. padding oder margin, falls nötig */
+  display: flex;
+  flex-direction: column;
+  /* Bilder vertikal untereinander */
+  justify-content: flex-start;
+  align-items: center;
+  /* Bilder zentriert in ihrem Container */
+  padding-right: 20px;
+  /* Etwas Abstand zum Text */
+  margin-right: 150px;
 }
 
-#Inhalt {
-  flex: 5;
-  text-align: left;
-  /* Gibt dem Text mehr Platz */
-  padding: 0px 20px;
-  /* Fügt etwas Platz um den Text hinzu, damit er nicht direkt an den Bildern klebt */
+#BilderBereich img {
+  width: 500px;
+  /* Setzt eine feste Breite für die Bilder */
+  margin-bottom: 10px;
+  /* Fügt Abstand zwischen den Bildern hinzu */
 }
+
+#Überschrift,
+#Inhalt,
+#TextBereich p {
+  /* Stil für Überschrift und Paragraphen */
+  text-align: left;
+  padding-bottom: 20px;
+  /* Etwas Abstand zwischen den Absätzen */
+  font-size: 20px;
+  /* Einheitliche Schriftgröße */
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/*=======================================Hier ist der Inhalt der ersten Section zu ende==============================*/
+
+
+/*=====================================Hier sind die loges die nebden Der Bannerüberschrift einfgefügt wurden====================*/
 
 .image-left,
 .image-right {
@@ -184,8 +206,10 @@ body {
 
 .image-right img,
 .image-left img {
-  width: 50%; /* Die Bilder füllen 50% der Breite ihres Containers aus */
-  height: auto; /* Passt die Höhe automatisch an */
+  width: 50%;
+  /* Die Bilder füllen 50% der Breite ihres Containers aus */
+  height: auto;
+  /* Passt die Höhe automatisch an */
 }
 
 /*=======================================Hier ist der Inhalt der ersten Section==============================*/
@@ -200,8 +224,10 @@ body {
   justify-content: space-around;
   /* Zentriert die Elemente horizontal */
   padding: 20px;
-  transition: opacity 0.5s, visibility 0.5s; /* Sanfter Übergang für Opazität und Sichtbarkeit */
-  opacity: 1; /* Standardmäßig sichtbar */
+  transition: opacity 0.5s, visibility 0.5s;
+  /* Sanfter Übergang für Opazität und Sichtbarkeit */
+  opacity: 1;
+  /* Standardmäßig sichtbar */
   visibility: visible;
 }
 
@@ -212,14 +238,37 @@ body {
   font-size: 65px;
   background-color: rgba(255, 255, 255, 0.6);
   /* Weiß mit 50% Transparenz */
-  color: #c01010;
+  color: #c04210;
   /* Textfarbe */
   padding: 60px;
   /* Fügt einen weichen Schatten hinzu */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
 }
 
 /* ========================================Hier ist der Banner eingefügt========================================= */
+
+/*=======================================Hier wird der Text für das Impressum bearbeitet============================*/
+
+#Impressumstextbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#ImpressumInhalt {
+  text-align: left;
+  padding-bottom: 20px;
+  /* Etwas Abstand zwischen den Absätzen */
+  font-size: 20px;
+  /* Einheitliche Schriftgröße */
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+#ImpressumÜberschrift {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
 
 /*============================================ Hier ist die Fusszeile================================================ */
 
@@ -228,5 +277,3 @@ footer {
   /* Beispiel für einen Fußzeilen-Hintergrund */
   padding: 10px;
 }
-
-/*=============================BUTTON STYLES=====================================*/
