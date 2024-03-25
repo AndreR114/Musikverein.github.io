@@ -18,7 +18,7 @@ function scrollFunction() {
 //Navigationsleist oben anpinnen und besser sichtbar machen
 
 function stickNavigation() {
-  var navigation = document.getElementById("navigation");
+  var navigation = document.getElementsByClassName("navigation")[0];
   // Ersetzen Sie "20" durch die tatsächliche Höhe Ihres Banners, wenn bekannt
   if (window.scrollY > 60) {
     navigation.classList.add("sticky-nav");
@@ -28,3 +28,11 @@ function stickNavigation() {
     //navigation.style.transform = "translateY(-100%)";
   }
 }
+
+window.addEventListener("scroll", stickNavigation);
+
+document.querySelector(".hamburger").addEventListener("click", function () {
+  document.querySelector(".nav-menu").classList.toggle("show");
+});
+
+//Toogeln des DropDown Menus

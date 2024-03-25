@@ -29,7 +29,7 @@ body {
 
 /*=======================================Hier ist die Navigationsleiste==============================*/
 
-#navigation {
+.navigation {
   /*position: -webkit-sticky;*/
   /* Für Safari */
 
@@ -50,10 +50,13 @@ body {
 
 .sticky-nav {
   position: fixed;
-  max-width: 1863px; /* Stellt sicher, dass beide Elemente dieselbe maximale Breite haben */
+  max-width: 1863px;
+  /* Stellt sicher, dass beide Elemente dieselbe maximale Breite haben */
   width: 100%;
-  margin: 0 auto; /* Zentriert beide Elemente */
-  padding: 0 20px; /* Fügt etwas Platz an den Seiten hinzu */
+  margin: 0 auto;
+  /* Zentriert beide Elemente */
+  padding: 0 20px;
+  /* Fügt etwas Platz an den Seiten hinzu */
   /* oder die Breite Ihres Containers */
   margin-left: auto;
   margin-right: auto;
@@ -68,7 +71,7 @@ body {
   z-index: 999;
 }
 
-#navigation ul {
+.navigation ul {
   display: flex;
   list-style-type: none;
   /* Entfernt Bullet-Points */
@@ -81,7 +84,7 @@ body {
   /* Nimmt die volle Breite des Containers ein */
 }
 
-#navigation li {
+.navigation li {
   float: left;
   /* Ordnet die Listenelemente linksbündig an */
   padding-left: 20px;
@@ -89,7 +92,7 @@ body {
 
 /*===Hier werden die Nav-Elemenste gestaltet===*/
 
-#navigation li a {
+.navigation li a {
   background-color: #502ee7e5;
   /* Grüne Hintergrundfarbe */
   color: white;
@@ -120,12 +123,30 @@ body {
   color: black !important;
 }
 
-#navigation li a:hover {
+.navigation li a:hover {
   background-color: #300bd8;
   /* Dunklerer Grünton beim Darüberfahren */
   transform: scale(1.1);
   /* Vergrößert den Button um 10% */
   color: black;
+}
+
+/*====Mobiel DropDownMenü versteckt bis reponsiv umbruch========*/
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Versteckt das Menü standardmäßig */
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.show {
+  display: flex;
 }
 
 /*=======================================Hier ist der Navigationsleistenberch zu ende==============================*/
@@ -200,41 +221,63 @@ body {
 
 #Linkbereich {
   display: flex;
-  flex-direction: column; /* Vertikale Anordnung der Links */
-  justify-content: flex-start; /* Startet am Anfang des Containers */
-  align-items: flex-start; /* Links linksbündig ausrichten */
-  padding-left: 120px; /* Optional: Fügt etwas Abstand zum Text hinzu */
+  flex-direction: column;
+  /* Vertikale Anordnung der Links */
+  justify-content: flex-start;
+  /* Startet am Anfang des Containers */
+  align-items: flex-start;
+  /* Links linksbündig ausrichten */
+  padding-left: 120px;
+  /* Optional: Fügt etwas Abstand zum Text hinzu */
   /* Fügen Sie hier weitere Stile hinzu, z.B. für Abstände zwischen den Links */
   padding-right: 50px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgba(245, 245, 245, 1)
-  ); /* Subtiler Farbverlauf von transparent zu leichtem Grau */
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgba(245, 245, 245, 1));
+  /* Subtiler Farbverlauf von transparent zu leichtem Grau */
   border-radius: 8px;
 }
 
 #Linkbereich a {
-  text-decoration: none; /* Entfernt Unterstreichungen von Links */
-  padding: 10px 0; /* Vertikaler Abstand zwischen den Links */
-  color: #000; /* Dunkle Schriftfarbe für bessere Lesbarkeit */
-  position: relative; /* Ermöglicht relative Positionierung der Pfeile */
+  text-decoration: none;
+  /* Entfernt Unterstreichungen von Links */
+  padding: 10px 0;
+  /* Vertikaler Abstand zwischen den Links */
+  color: #502ee7;
+  /* Dunkle Schriftfarbe für bessere Lesbarkeit */
+  position: relative;
+  /* Ermöglicht relative Positionierung der Pfeile */
 }
 
 #Linkbereich a::before {
-  content: "→"; /* Unicode Pfeil */
+  content: "\25B6";
+  /* Unicode Pfeil */
   display: inline-block;
-  margin-right: 10px; /* Abstand zwischen Pfeil und Linktext */
-  color: #007bff; /* Pfeilfarbe */
-  transition: transform 0.3s ease; /* Animation für Hover-Effekt */
+  margin-right: 10px;
+  /* Abstand zwischen Pfeil und Linktext */
+  color: #502ee7;
+  /* Pfeilfarbe */
+  transition: transform 0.3s ease;
+  /* Animation für Hover-Effekt */
+}
+
+.faceCon {
+  color: #300bd8;
 }
 
 #Linkbereich a:hover::before {
-  transform: translateX(5px); /* Verschiebt den Pfeil nach rechts beim Hover */
+  transform: translateX(5px);
+  /* Verschiebt den Pfeil nach rechts beim Hover */
 }
 
 #Linkbereich a:hover {
-  color: #007bff; /* Linkfarbe ändert sich beim Hover */
+  color: #023974;
+  /* Linkfarbe ändert sich beim Hover */
+}
+
+#LinklisteÜberschrift {
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 /*=======================================Hier ist der Inhalt der ersten Section zu ende==============================*/
@@ -250,9 +293,10 @@ body {
 
 .image-right img,
 .image-left img {
-  width: 50%;
+  width: 75%;
   /* Die Bilder füllen 50% der Breite ihres Containers aus */
   height: auto;
+
   /* Passt die Höhe automatisch an */
 }
 
@@ -300,11 +344,12 @@ body {
 #ImpressumInhalt {
   text-align: left;
   padding-bottom: 20px;
+  margin-right: 1000px;
   /* Etwas Abstand zwischen den Absätzen */
   font-size: 20px;
   /* Einheitliche Schriftgröße */
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.87);
+  color: black;
 }
 
 #ImpressumÜberschrift {
@@ -318,4 +363,40 @@ footer {
   background-color: #f0f0f0;
   /* Beispiel für einen Fußzeilen-Hintergrund */
   padding: 10px;
+}
+
+/*============================================Hier wird die Mobile Responsivness hergestellt========================*/
+
+/* Media Query für Smartphones */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu.show {
+    display: flex !important;
+
+
+    .navigation li {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .navigation li a {
+      display: block;
+    }
+
+    .image-right img,
+    .image-left img {
+      display: none;
+    }
+
+
+  }
 }
