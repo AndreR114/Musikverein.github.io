@@ -50,8 +50,10 @@ body {
 
 .sticky-nav {
   position: fixed;
+  max-width: 1863px; /* Stellt sicher, dass beide Elemente dieselbe maximale Breite haben */
   width: 100%;
-  max-width: 1880px;
+  margin: 0 auto; /* Zentriert beide Elemente */
+  padding: 0 20px; /* Fügt etwas Platz an den Seiten hinzu */
   /* oder die Breite Ihres Containers */
   margin-left: auto;
   margin-right: auto;
@@ -114,6 +116,10 @@ body {
   /* Animiert die Transformation */
 }
 
+.active {
+  color: black !important;
+}
+
 #navigation li a:hover {
   background-color: #300bd8;
   /* Dunklerer Grünton beim Darüberfahren */
@@ -128,7 +134,6 @@ body {
 
 #main-content {
   padding: 20px;
-
 }
 
 #about {
@@ -148,7 +153,6 @@ body {
   line-height: 1.5;
   text-align: center;
   /* Zentriert die Überschrift */
-
 }
 
 #WerSindWirText {
@@ -186,14 +190,54 @@ body {
   text-align: left;
   padding-bottom: 20px;
   /* Etwas Abstand zwischen den Absätzen */
-  font-size: 20px;
+  font-size: 25px;
   /* Einheitliche Schriftgröße */
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
 }
 
-/*=======================================Hier ist der Inhalt der ersten Section zu ende==============================*/
+/*=============Hier wird die Linkliste neben dem Text gestaltet===============*/
 
+#Linkbereich {
+  display: flex;
+  flex-direction: column; /* Vertikale Anordnung der Links */
+  justify-content: flex-start; /* Startet am Anfang des Containers */
+  align-items: flex-start; /* Links linksbündig ausrichten */
+  padding-left: 120px; /* Optional: Fügt etwas Abstand zum Text hinzu */
+  /* Fügen Sie hier weitere Stile hinzu, z.B. für Abstände zwischen den Links */
+  padding-right: 50px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(245, 245, 245, 1)
+  ); /* Subtiler Farbverlauf von transparent zu leichtem Grau */
+  border-radius: 8px;
+}
+
+#Linkbereich a {
+  text-decoration: none; /* Entfernt Unterstreichungen von Links */
+  padding: 10px 0; /* Vertikaler Abstand zwischen den Links */
+  color: #000; /* Dunkle Schriftfarbe für bessere Lesbarkeit */
+  position: relative; /* Ermöglicht relative Positionierung der Pfeile */
+}
+
+#Linkbereich a::before {
+  content: "→"; /* Unicode Pfeil */
+  display: inline-block;
+  margin-right: 10px; /* Abstand zwischen Pfeil und Linktext */
+  color: #007bff; /* Pfeilfarbe */
+  transition: transform 0.3s ease; /* Animation für Hover-Effekt */
+}
+
+#Linkbereich a:hover::before {
+  transform: translateX(5px); /* Verschiebt den Pfeil nach rechts beim Hover */
+}
+
+#Linkbereich a:hover {
+  color: #007bff; /* Linkfarbe ändert sich beim Hover */
+}
+
+/*=======================================Hier ist der Inhalt der ersten Section zu ende==============================*/
 
 /*=====================================Hier sind die loges die nebden Der Bannerüberschrift einfgefügt wurden====================*/
 
@@ -242,7 +286,6 @@ body {
   /* Textfarbe */
   padding: 60px;
   /* Fügt einen weichen Schatten hinzu */
-
 }
 
 /* ========================================Hier ist der Banner eingefügt========================================= */
@@ -263,7 +306,6 @@ body {
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
 }
-
 
 #ImpressumÜberschrift {
   font-size: 40px;
