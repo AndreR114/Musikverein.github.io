@@ -231,9 +231,11 @@ body {
   /* Optional: Fügt etwas Abstand zum Text hinzu */
   /* Fügen Sie hier weitere Stile hinzu, z.B. für Abstände zwischen den Links */
   padding-right: 50px;
-  background: linear-gradient(to right,
-      rgba(255, 255, 255, 0),
-      rgba(245, 245, 245, 1));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(245, 245, 245, 1)
+  );
   /* Subtiler Farbverlauf von transparent zu leichtem Grau */
   border-radius: 8px;
 }
@@ -368,6 +370,7 @@ footer {
 /*============================================Hier wird die Mobile Responsivness hergestellt========================*/
 
 /* Media Query für Smartphones */
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -376,27 +379,163 @@ footer {
   .nav-menu {
     display: none !important;
     flex-direction: column;
-    width: 100%;
   }
 
   .nav-menu.show {
     display: flex !important;
+    max-width: 80%; /* Passt die maximale Breite des Containers an */
+    margin: 0 auto; /* Zentriert den Container horizontal */
+  }
 
+  .navigation li {
+    width: 40%; /* Stellt sicher, dass jedes Listenelement die volle Breite einnimmt */
+    box-sizing: border-box; /* Berücksichtigt Padding und Border in der Breite */
+    text-align: center;
+    padding: 5px 0;
+  }
 
-    .navigation li {
-      text-align: center;
-      padding: 10px 0;
-    }
+  .navigation li a {
+    display: block;
+    width: 90%;
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+  }
 
-    .navigation li a {
-      display: block;
-    }
+  .image-right img,
+  .image-left img {
+    display: none;
+  }
 
-    .image-right img,
-    .image-left img {
-      display: none;
-    }
+  .navigation ul {
+    display: flex;
+    flex-direction: column; /* Stapelt die Links vertikal */
+    /* Stellt sicher, dass die Liste die volle Breite einnimmt */
+    text-align: left;
+  }
 
+  #titel {
+    font-size: 6vw; /* Passt die Schriftgröße an, um Überlaufen zu vermeiden */
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 
+  /* Anpassungen für Bilder und Überschriften im Impressum */
+  #ImpressumInhalt,
+  #ImpressumÜberschrift {
+    margin-right: 0; /* Entfernt den rechten Margin */
+  }
+
+  .sticky-nav {
+    position: fixed;
+    max-width: 768px;
+    /* Stellt sicher, dass beide Elemente dieselbe maximale Breite haben */
+    width: 100%;
+    margin: 0 auto;
+    /* Zentriert beide Elemente */
+    padding: 0 20px;
+    /* Fügt etwas Platz an den Seiten hinzu */
+    /* oder die Breite Ihres Containers */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: whitesmoke !important;
+    /* Neue Hintergrundfarbe, wenn sticky */
+    transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+    /* Fügt einen sanften Übergang für Transformation und Hintergrundfarbe hinzu */
+    z-index: 999;
+  }
+
+  #BilderBereich {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert die Bilder im Container */
+    padding: 0 15px; /* Fügt horizontalen Padding hinzu, um nicht direkt am Bildschirmrand zu sein */
+    margin-right: 0;
+  }
+
+  #BilderBereich img {
+    max-width: 100%; /* Stellt sicher, dass Bilder nie breiter als ihr Container sind */
+    height: auto; /* Behält das Seitenverhältnis der Bilder bei */
+    margin-bottom: 20px; /* Fügt einen Abstand zwischen den Bildern hinzu */
+  }
+
+  /* Optional: Entfernen des unteren Margins vom letzten Bild, um unnötigen Abstand am Ende zu vermeiden */
+  #BilderBereich img:last-child {
+    margin-bottom: 20px;
+  }
+
+  #about {
+    display: flex;
+    text-align: center;
+    /* Ermöglicht eine horizontale Anordnung der Kinder */
+    flex-direction: column;
+    /* Horizontale Anordnung der Kinder */
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  #Überschrift {
+    width: 100%;
+    padding-bottom: 40px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    /* Zentriert die Überschrift */
+  }
+
+  #WerSindWirText {
+    display: flex;
+    flex-direction: column;
+    /* Stellt sicher, dass der Text vertikal angeordnet ist */
+    align-items: center;
+    /* Text linksbündig ausgerichtet */
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  #Linkbereich {
+    display: flex;
+    flex-direction: column;
+    /* Vertikale Anordnung der Links */
+    justify-content: center;
+    /* Startet am Anfang des Containers */
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    background: rgba(245, 245, 245, 1);
+  }
+  #Inhalt {
+    text-align: center;
+    padding-bottom: 10px;
+    /* Etwas Abstand zwischen den Absätzen */
+    font-size: 12px;
+    /* Einheitliche Schriftgröße */
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  #LinklisteÜberschrift {
+    font-size: 18px;
+  }
+
+  #banner {
+    display: flex;
+    flex-direction: column;
+    /* Stapelt die Elemente horizontal */
+    align-items: center;
+    /* Zentriert die Elemente horizontal */
+    padding: 20px;
+    transition: opacity 0.5s, visibility 0.5s;
+    /* Sanfter Übergang für Opazität und Sichtbarkeit */
+    opacity: 1;
+    /* Standardmäßig sichtbar */
+    visibility: visible;
+    width: 100%;
   }
 }
