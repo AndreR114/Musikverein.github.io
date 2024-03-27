@@ -286,18 +286,18 @@ body {
 
 /*=====================================Hier sind die loges die nebden Der Bannerüberschrift einfgefügt wurden====================*/
 
-.image-left,
-.image-right {
-  /* Stellen Sie sicher, dass die Bilder nicht zu groß sind. */
-  flex: 1;
-  text-align: center;
+.images-wrapper {
+  display: flex;
+  justify-content: center; /* Zentriert die Bilder horizontal */
+  width: 100%; /* Passt die Breite des Wrappers an */
 }
 
 .image-right img,
 .image-left img {
-  width: 75%;
+  width: 45%;
   /* Die Bilder füllen 50% der Breite ihres Containers aus */
   height: auto;
+  margin-top: 20px;
 
   /* Passt die Höhe automatisch an */
 }
@@ -306,7 +306,11 @@ body {
 
 /* ========================================Hier ist der Banner eingefügt========================================= */
 
-#banner {
+.MediaquerryEin {
+  display: none;
+}
+
+.MediaquerryAus {
   display: flex;
   flex-direction: row;
   /* Stapelt die Elemente horizontal */
@@ -330,7 +334,7 @@ body {
   /* Weiß mit 50% Transparenz */
   color: #c04210;
   /* Textfarbe */
-  padding: 60px;
+  padding: 20px;
   /* Fügt einen weichen Schatten hinzu */
 }
 
@@ -400,11 +404,6 @@ footer {
     text-align: left;
     font-size: 10px;
     font-weight: bold;
-  }
-
-  .image-right img,
-  .image-left img {
-    display: none;
   }
 
   .navigation ul {
@@ -511,7 +510,7 @@ footer {
     background: rgba(245, 245, 245, 1);
   }
   #Inhalt {
-    text-align: center;
+    text-align: left;
     padding-bottom: 10px;
     /* Etwas Abstand zwischen den Absätzen */
     font-size: 12px;
@@ -524,18 +523,43 @@ footer {
     font-size: 18px;
   }
 
-  #banner {
+  .MediaquerryEin {
     display: flex;
     flex-direction: column;
-    /* Stapelt die Elemente horizontal */
     align-items: center;
-    /* Zentriert die Elemente horizontal */
-    padding: 20px;
-    transition: opacity 0.5s, visibility 0.5s;
-    /* Sanfter Übergang für Opazität und Sichtbarkeit */
-    opacity: 1;
-    /* Standardmäßig sichtbar */
-    visibility: visible;
-    width: 100%;
+  }
+
+  .MediaquerryAus {
+    display: none;
+  }
+
+  .MediaquerryEin {
+    display: block; /* Zeigt den zweiten Banner an */
+    margin-bottom: 20px;
+  }
+
+  .images-wrapper {
+    display: flex;
+    justify-content: space-around; /* Stellt die Bilder nebeneinander mit Abstand um sie herum */
+    width: 100%; /* Passt die Breite des Wrappers an */
+    order: -1; /* Stellt sicher, dass der images-wrapper über dem Titel angezeigt wird */
+    padding: 10px 0;
+  }
+
+  .image-right,
+  .image-left {
+    padding: 0 10px; /* Fügt horizontalen Abstand zwischen den Bildern hinzu */
+  }
+
+  .image-right img,
+  .image-left img {
+    max-width: 100%; /* Explizite Größenangabe für die Bilder */
+    height: auto; /* Behält das Seitenverhältnis bei */
+    margin: 5px auto; /* Fügt Abstand um die Bilder hinzu und zentriert sie */
+  }
+
+  #titel {
+    padding: 20px 0; /* Fügt vertikalen Padding zum Titel hinzu */
+    order: 0;
   }
 }
