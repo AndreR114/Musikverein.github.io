@@ -379,7 +379,7 @@ body {
 
 /*=======================================Hier ist der Inhalt der ersten Section zu ende==============================*/
 
-/*=====================================Hier sind die loges die nebden Der Bannerüberschrift einfgefügt wurden====================*/
+/*=====================================Hier sind die loges die neben Der Bannerüberschrift einfgefügt wurden====================*/
 
 .images-wrapper {
   display: flex;
@@ -420,6 +420,19 @@ body {
   opacity: 1;
   /* Standardmäßig sichtbar */
   visibility: visible;
+
+}
+
+
+
+@keyframes rollIn {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
 }
 
 #titel {
@@ -460,6 +473,39 @@ body {
   font-size: 40px;
   margin-bottom: 50px;
 }
+
+/*=============================================Hier wird die Seite Aktuelles gestylt=================================*/
+
+#AktuelleBilder {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+}
+
+#ÜberschriftAktuelles {
+  padding: 30px;
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+#BilderBereichAktuell img {
+
+  display: block;
+  /* Macht jedes Bild zu einem Block-Element */
+  width: 100%;
+  /* Macht die Bilder responsive */
+  max-width: 1033px;
+  /* Maximale Breite der Bilder */
+  height: auto;
+  /* Behält das Seitenverhältnis bei */
+  margin: 20px auto;
+  /* Zentriert die Bilder */
+
+}
+
+
+
+
 
 /*============================================ Hier ist die Fusszeile================================================ */
 
@@ -633,20 +679,18 @@ footer {
   }
 
   .MediaquerryEin {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   .MediaquerryAus {
     display: none;
   }
 
-  .MediaquerryEin {
-    display: block;
-    /* Zeigt den zweiten Banner an */
-    margin-bottom: 20px;
-  }
+
 
   .images-wrapper {
     display: flex;
