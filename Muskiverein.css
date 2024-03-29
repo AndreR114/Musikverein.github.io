@@ -44,14 +44,15 @@ body {
   /* Etwas Abstand innen für die Navigationsleiste */
   background-color: rgba(255, 255, 255, 0.6);
   /* Weiß mit 50% Transparenz */
+  border-radius: 5px;
 }
 
 /*============JS Klasse die funktional hinzugefügt wir==============*/
 
 .sticky-nav {
   position: fixed;
-  max-width: 1863px;
-  /* Stellt sicher, dass beide Elemente dieselbe maximale Breite haben */
+
+  /* Stellt s63icher, dass beide Elemente dieselbe maximale Breite haben */
   width: 100%;
   margin: 0 auto;
   /* Zentriert beide Elemente */
@@ -66,9 +67,13 @@ body {
   top: 0;
   background-color: whitesmoke !important;
   /* Neue Hintergrundfarbe, wenn sticky */
-  transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+  transition: transform 0.8s ease-out, background-color 0.5s ease-out;
   /* Fügt einen sanften Übergang für Transformation und Hintergrundfarbe hinzu */
   z-index: 999;
+  border-bottom-left-radius: 10px;
+  /* Fügt einen Radius zur unteren linken Ecke hinzu */
+  border-bottom-right-radius: 10px;
+
 }
 
 .navigation ul {
@@ -93,7 +98,7 @@ body {
 /*===Hier werden die Nav-Elemenste gestaltet===*/
 
 .navigation li a {
-  background-color: #502ee7e5;
+  background-color: #4E74BF;
   /* Grüne Hintergrundfarbe */
   color: white;
   /* Weiße Textfarbe */
@@ -133,11 +138,83 @@ body {
 
 /*====Mobiel DropDownMenü versteckt bis reponsiv umbruch========*/
 
+
+.hamburger-container {
+  cursor: pointer;
+  padding: 15px;
+  /* Bietet zusätzlichen Raum um das Symbol */
+  height: 58px;
+  /* Korrektur: War '58x', sollte '58px' sein */
+  width: 58px;
+  /* Mindestbreite für gute Anklickbarkeit */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* Stellt sicher, dass es über anderen Elementen liegt */
+  transition: background-color 0.3s;
+  /* Optional: Hintergrund-Farbübergang */
+}
+
 /* Hamburger Icon */
 .hamburger {
-  display: none;
-  font-size: 30px;
   cursor: pointer;
+  height: 2px;
+  /* Höhe der zentralen Linie */
+  width: 40px;
+  /* Breite des Icons */
+  background: black;
+  /* Farbe des Icons */
+  position: relative;
+  display: block;
+  /* Stellt sicher, dass es als Blockelement behandelt wird, um die Positionierung der Pseudo-Elemente zu erleichtern */
+  margin: 0;
+  /* Fügt vertikalen Abstand hinzu, um die zentrale Linie von den anderen zu trennen */
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active::before,
+.hamburger.active::after {
+  top: 0;
+  /* Zentriert beide Linien für die Überlagerung */
+  transform-origin: 50%;
+  /* Stellt sicher, dass die Rotation um die Mitte der Linie erfolgt */
+}
+
+.hamburger::before {
+  top: -9px;
+  /* Passt den Abstand nach oben an */
+}
+
+.hamburger::after {
+  top: 9px;
+  /* Passt den Abstand nach unten an, von der Mitte des .hamburger Elements */
+}
+
+/* CSS für die Transformation in ein "X" */
+.hamburger.active {
+  background: transparent;
+  /* macht die mittlere Linie unsichtbar */
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg);
+
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg);
+
 }
 
 /* Versteckt das Menü standardmäßig */
@@ -164,6 +241,7 @@ body {
   /* Horizontale Anordnung der Kinder */
   padding: 50px;
   background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
 }
 
 #Überschrift {
@@ -182,7 +260,7 @@ body {
   /* Stellt sicher, dass der Text vertikal angeordnet ist */
   align-items: flex-end;
   /* Text linksbündig ausgerichtet */
-  max-width: 30%;
+  max-width: 40%;
 }
 
 #BilderBereich {
@@ -192,15 +270,16 @@ body {
   justify-content: flex-start;
   align-items: center;
   /* Bilder zentriert in ihrem Container */
-  padding-right: 20px;
+  padding-right: 0px;
   /* Etwas Abstand zum Text */
-  margin-right: 150px;
+  margin-right: 80px;
+
 }
 
 #BilderBereich img {
   width: 500px;
   /* Setzt eine feste Breite für die Bilder */
-  margin-bottom: 10px;
+  margin-bottom: 200px;
   /* Fügt Abstand zwischen den Bildern hinzu */
 }
 
@@ -209,7 +288,7 @@ body {
 #TextBereich p {
   /* Stil für Überschrift und Paragraphen */
   text-align: left;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   /* Etwas Abstand zwischen den Absätzen */
   font-size: 25px;
   /* Einheitliche Schriftgröße */
@@ -231,11 +310,9 @@ body {
   /* Optional: Fügt etwas Abstand zum Text hinzu */
   /* Fügen Sie hier weitere Stile hinzu, z.B. für Abstände zwischen den Links */
   padding-right: 50px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgba(245, 245, 245, 1)
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgba(245, 245, 245, 1));
   /* Subtiler Farbverlauf von transparent zu leichtem Grau */
   border-radius: 8px;
 }
@@ -245,7 +322,7 @@ body {
   /* Entfernt Unterstreichungen von Links */
   padding: 10px 0;
   /* Vertikaler Abstand zwischen den Links */
-  color: #502ee7;
+  color: #4E74BF;
   /* Dunkle Schriftfarbe für bessere Lesbarkeit */
   position: relative;
   /* Ermöglicht relative Positionierung der Pfeile */
@@ -257,7 +334,7 @@ body {
   display: inline-block;
   margin-right: 10px;
   /* Abstand zwischen Pfeil und Linktext */
-  color: #502ee7;
+  color: #4E74BF;
   /* Pfeilfarbe */
   transition: transform 0.3s ease;
   /* Animation für Hover-Effekt */
@@ -288,8 +365,10 @@ body {
 
 .images-wrapper {
   display: flex;
-  justify-content: center; /* Zentriert die Bilder horizontal */
-  width: 100%; /* Passt die Breite des Wrappers an */
+  justify-content: center;
+  /* Zentriert die Bilder horizontal */
+  width: 100%;
+  /* Passt die Breite des Wrappers an */
 }
 
 .image-right img,
@@ -331,8 +410,9 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 65px;
   background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
   /* Weiß mit 50% Transparenz */
-  color: #c04210;
+  color: #D90404;
   /* Textfarbe */
   padding: 20px;
   /* Fügt einen weichen Schatten hinzu */
@@ -376,9 +456,7 @@ footer {
 /* Media Query für Smartphones */
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+
 
   .nav-menu {
     display: none !important;
@@ -387,13 +465,17 @@ footer {
 
   .nav-menu.show {
     display: flex !important;
-    max-width: 80%; /* Passt die maximale Breite des Containers an */
-    margin: 0 auto; /* Zentriert den Container horizontal */
+    max-width: 80%;
+    /* Passt die maximale Breite des Containers an */
+    margin: 0 auto;
+    /* Zentriert den Container horizontal */
   }
 
   .navigation li {
-    width: 40%; /* Stellt sicher, dass jedes Listenelement die volle Breite einnimmt */
-    box-sizing: border-box; /* Berücksichtigt Padding und Border in der Breite */
+    width: 40%;
+    /* Stellt sicher, dass jedes Listenelement die volle Breite einnimmt */
+    box-sizing: border-box;
+    /* Berücksichtigt Padding und Border in der Breite */
     text-align: center;
     padding: 5px 0;
   }
@@ -408,13 +490,15 @@ footer {
 
   .navigation ul {
     display: flex;
-    flex-direction: column; /* Stapelt die Links vertikal */
+    flex-direction: column;
+    /* Stapelt die Links vertikal */
     /* Stellt sicher, dass die Liste die volle Breite einnimmt */
     text-align: left;
   }
 
   #titel {
-    font-size: 6vw; /* Passt die Schriftgröße an, um Überlaufen zu vermeiden */
+    font-size: 6vw;
+    /* Passt die Schriftgröße an, um Überlaufen zu vermeiden */
     padding: 20px;
     margin-left: -20px;
     margin-right: -20px;
@@ -423,7 +507,8 @@ footer {
   /* Anpassungen für Bilder und Überschriften im Impressum */
   #ImpressumInhalt,
   #ImpressumÜberschrift {
-    margin-right: 0; /* Entfernt den rechten Margin */
+    margin-right: 0;
+    /* Entfernt den rechten Margin */
   }
 
   .sticky-nav {
@@ -452,15 +537,20 @@ footer {
   #BilderBereich {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Zentriert die Bilder im Container */
-    padding: 0 15px; /* Fügt horizontalen Padding hinzu, um nicht direkt am Bildschirmrand zu sein */
+    align-items: center;
+    /* Zentriert die Bilder im Container */
+    padding: 0 15px;
+    /* Fügt horizontalen Padding hinzu, um nicht direkt am Bildschirmrand zu sein */
     margin-right: 0;
   }
 
   #BilderBereich img {
-    max-width: 100%; /* Stellt sicher, dass Bilder nie breiter als ihr Container sind */
-    height: auto; /* Behält das Seitenverhältnis der Bilder bei */
-    margin-bottom: 20px; /* Fügt einen Abstand zwischen den Bildern hinzu */
+    max-width: 100%;
+    /* Stellt sicher, dass Bilder nie breiter als ihr Container sind */
+    height: auto;
+    /* Behält das Seitenverhältnis der Bilder bei */
+    margin-bottom: 20px;
+    /* Fügt einen Abstand zwischen den Bildern hinzu */
   }
 
   /* Optional: Entfernen des unteren Margins vom letzten Bild, um unnötigen Abstand am Ende zu vermeiden */
@@ -509,6 +599,7 @@ footer {
     padding-right: 0;
     background: rgba(245, 245, 245, 1);
   }
+
   #Inhalt {
     text-align: left;
     padding-bottom: 10px;
@@ -534,32 +625,48 @@ footer {
   }
 
   .MediaquerryEin {
-    display: block; /* Zeigt den zweiten Banner an */
+    display: block;
+    /* Zeigt den zweiten Banner an */
     margin-bottom: 20px;
   }
 
   .images-wrapper {
     display: flex;
-    justify-content: space-around; /* Stellt die Bilder nebeneinander mit Abstand um sie herum */
-    width: 100%; /* Passt die Breite des Wrappers an */
-    order: -1; /* Stellt sicher, dass der images-wrapper über dem Titel angezeigt wird */
+    justify-content: space-around;
+    /* Stellt die Bilder nebeneinander mit Abstand um sie herum */
+    width: 100%;
+    /* Passt die Breite des Wrappers an */
+    order: -1;
+    /* Stellt sicher, dass der images-wrapper über dem Titel angezeigt wird */
     padding: 10px 0;
   }
 
   .image-right,
   .image-left {
-    padding: 0 10px; /* Fügt horizontalen Abstand zwischen den Bildern hinzu */
+    padding: 0 10px;
+    /* Fügt horizontalen Abstand zwischen den Bildern hinzu */
   }
 
   .image-right img,
   .image-left img {
-    max-width: 100%; /* Explizite Größenangabe für die Bilder */
-    height: auto; /* Behält das Seitenverhältnis bei */
-    margin: 5px auto; /* Fügt Abstand um die Bilder hinzu und zentriert sie */
+    max-width: 100%;
+    /* Explizite Größenangabe für die Bilder */
+    height: auto;
+    /* Behält das Seitenverhältnis bei */
+    margin: 5px auto;
+    /* Fügt Abstand um die Bilder hinzu und zentriert sie */
   }
 
   #titel {
-    padding: 20px 0; /* Fügt vertikalen Padding zum Titel hinzu */
+    padding: 20px 0;
+    /* Fügt vertikalen Padding zum Titel hinzu */
     order: 0;
   }
+
+  .hamburger-container {
+    display: flex;
+
+  }
+
+
 }

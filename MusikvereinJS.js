@@ -32,7 +32,16 @@ function stickNavigation() {
 window.addEventListener("scroll", stickNavigation);
 
 document.querySelector(".hamburger").addEventListener("click", function () {
+  this.classList.toggle("active"); // Wechselt die .active Klasse beim Klicken
   document.querySelector(".nav-menu").classList.toggle("show");
 });
 
+document
+  .querySelector(".hamburger-container")
+  .addEventListener("click", function () {
+    // Toggle-Funktion für das Hamburger-Icon und das Menü
+    var hamburger = this.querySelector(".hamburger");
+    hamburger.classList.toggle("active"); // Wechselt die Klasse für die Transformation
+    document.querySelector(".nav-menu").classList.toggle("show"); // Zeigt oder verbirgt das Menü
+  });
 //Toogeln des DropDown Menus
