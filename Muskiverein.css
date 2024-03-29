@@ -283,6 +283,24 @@ body {
   /* Fügt Abstand zwischen den Bildern hinzu */
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
 #Überschrift,
 #Inhalt,
 #TextBereich p {

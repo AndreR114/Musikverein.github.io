@@ -39,4 +39,22 @@ document
     hamburger.classList.toggle("active"); // Wechselt die Klasse für die Transformation
     document.querySelector(".nav-menu").classList.toggle("show"); // Zeigt oder verbirgt das Menü
   });
-//Toogeln des DropDown Menus
+
+// Funktion, um das Overlay mit dem vergrößerten Bild zu öffnen
+function enlargeImage(src) {
+  document.getElementById("largeImg").src = src;
+  document.getElementById("imgOverlay").style.display = "flex";
+}
+
+// Funktion, um das Overlay zu schließen
+function closeImage() {
+  document.getElementById("imgOverlay").style.display = "none";
+}
+
+// Event-Listener für alle Bilder im #BilderBereich
+document.querySelectorAll("#BilderBereich img").forEach((img) => {
+  img.style.cursor = "pointer"; // Fügt einen Cursor hinzu, um anzudeuten, dass das Bild klickbar ist
+  img.onclick = function () {
+    enlargeImage(this.src); // Öffnet das Overlay mit dem Bild, auf das geklickt wurde
+  };
+});
