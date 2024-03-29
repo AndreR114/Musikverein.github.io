@@ -141,11 +141,11 @@ body {
 
 .hamburger-container {
   cursor: pointer;
-  padding: 5px;
+  padding: 20px;
   /* Bietet zusätzlichen Raum um das Symbol */
-  height: 58px;
+  height: 75px;
   /* Korrektur: War '58x', sollte '58px' sein */
-  width: 58px;
+  width: 75px;
   /* Mindestbreite für gute Anklickbarkeit */
   display: none;
   align-items: center;
@@ -665,6 +665,7 @@ footer {
 
   .hamburger-container {
     display: flex;
+
 
   }
 
