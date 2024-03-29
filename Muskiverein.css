@@ -141,7 +141,7 @@ body {
 
 .hamburger-container {
   cursor: pointer;
-  padding: 15px;
+  padding: 5px;
   /* Bietet zusätzlichen Raum um das Symbol */
   height: 58px;
   /* Korrektur: War '58x', sollte '58px' sein */
