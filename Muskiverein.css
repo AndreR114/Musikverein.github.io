@@ -122,6 +122,7 @@ body {
   /* Abgerundete Ecken */
   transition: transform 0.3s ease;
   /* Animiert die Transformation */
+
 }
 
 .active {
@@ -133,6 +134,7 @@ body {
   /* Dunklerer Grünton beim Darüberfahren */
   transform: scale(1.1);
   /* Vergrößert den Button um 10% */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
   color: black;
 }
 
