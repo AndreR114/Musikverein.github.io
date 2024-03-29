@@ -31,11 +31,6 @@ function stickNavigation() {
 
 window.addEventListener("scroll", stickNavigation);
 
-document.querySelector(".hamburger").addEventListener("click", function () {
-  this.classList.toggle("active"); // Wechselt die .active Klasse beim Klicken
-  document.querySelector(".nav-menu").classList.toggle("show");
-});
-
 document
   .querySelector(".hamburger-container")
   .addEventListener("click", function () {
