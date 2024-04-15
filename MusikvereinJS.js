@@ -60,9 +60,11 @@ document.querySelectorAll("#BilderBereich img").forEach((img) => {
 });
 
 // Event-Listener für alle Bilder im #BilderBereichaktuelles
-document.querySelectorAll("#BilderBereichAktuell img").forEach((img) => {
-  img.style.cursor = "pointer"; // Fügt einen Cursor hinzu, um anzudeuten, dass das Bild klickbar ist
-  img.onclick = function () {
-    enlargeImage(this.src); // Öffnet das Overlay mit dem Bild, auf das geklickt wurde
-  };
-});
+document
+  .querySelectorAll("#BilderBereichAktuell img , #BilderBereichHochzeit img")
+  .forEach((img) => {
+    img.style.cursor = "pointer"; // Fügt einen Cursor hinzu, um anzudeuten, dass das Bild klickbar ist
+    img.onclick = function () {
+      enlargeImage(this.src); // Öffnet das Overlay mit dem Bild, auf das geklickt wurde
+    };
+  });

@@ -499,7 +499,28 @@ body {
   /* Macht jedes Bild zu einem Block-Element */
   width: 100%;
   /* Macht die Bilder responsive */
-  max-width: 756px;
+  max-width: 512px;
+  /* Maximale Breite der Bilder */
+  height: auto;
+  /* Behält das Seitenverhältnis bei */
+  margin: 20px auto;
+  /* Zentriert die Bilder */
+
+}
+
+#ÜberschriftHochzeit {
+  padding: 30px;
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+#BilderBereichHochzeit img {
+
+  display: block;
+  /* Macht jedes Bild zu einem Block-Element */
+  width: 100%;
+  /* Macht die Bilder responsive */
+  max-width: 512px;
   /* Maximale Breite der Bilder */
   height: auto;
   /* Behält das Seitenverhältnis bei */
@@ -738,6 +759,14 @@ footer {
   }
 
   #ÜberschriftAktuelles {
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #ÜberschriftHochzeit {
     padding: 20px;
     margin-bottom: 20px;
     font-size: 20px;
