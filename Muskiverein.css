@@ -404,11 +404,11 @@ body {
 }
 
 .image-left {
-  margin-right: 250px;
+  margin-left: 100px;
 }
 
 .image-right {
-  margin-left: 250px;
+  margin-right: 100px;
 }
 
 /*=======================================Hier ist der Inhalt der ersten Section==============================*/
