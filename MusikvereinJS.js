@@ -68,10 +68,3 @@ document
       enlargeImage(this.src); // Öffnet das Overlay mit dem Bild, auf das geklickt wurde
     };
   });
-
-//Verhinder des Vergrösserns der Logos beim Zoomen
-window.addEventListener("resize", function () {
-  const img = document.getElementById("fixedSizeImage");
-  img.style.width = "194px"; // Breite in Pixel festlegen
-  img.style.height = "180px"; // Höhe in Pixel festlegen
-});

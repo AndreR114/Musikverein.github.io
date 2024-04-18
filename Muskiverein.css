@@ -398,19 +398,6 @@ body {
   /* Passt die Höhe automatisch an */
 }
 
-.image-right img,
-.image-left img {
-  width: 180px;
-}
-
-.image-left {
-  margin-left: 100px;
-}
-
-.image-right {
-  margin-right: 100px;
-}
-
 /*=======================================Hier ist der Inhalt der ersten Section==============================*/
 
 /* ========================================Hier ist der Banner eingefügt========================================= */
