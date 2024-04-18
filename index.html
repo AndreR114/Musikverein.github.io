@@ -1,172 +1,235 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Muskiverein.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="utf-8" />
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="Muskiverein.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <header id="site-header">
-    <div class="MediaquerryAus">
-      <div class="images-wrapper">
-        <div class="image-left">
-          <a href="https://www.mgdulliken.ch/"><img src="logo_Dulliken.png" alt="Logo des Musikvereins" /></a>
-        </div>
-        <!-- Platz für ein Banner -->
-        <h1 id="titel">Spielgemeinschaft Dulliken und Starrkirch-Wil</h1>
-        <div class="image-right">
-          <a href="https://www.mgstw.ch/"><img src="Logo_Starrkirch.png" alt="Logo des Musikvereins" /></a>
+  <body>
+    <header id="site-header">
+      <div class="MediaquerryAus">
+        <div class="images-wrapper">
+          <div class="image-left">
+            <a href="https://www.mgdulliken.ch/"
+              ><img
+                id="fixedSizeImage"
+                src="logo_Dulliken.png"
+                alt="Logo des Musikvereins"
+            /></a>
+          </div>
+          <!-- Platz für ein Banner -->
+          <h1 id="titel">
+            Spielgemeinschaft <br />
+            Dulliken - Starrkirch-Wil
+          </h1>
+          <div class="image-right">
+            <a href="https://www.mgstw.ch/"
+              ><img
+                id="fixedSizeImage"
+                src="Logo_Starrkirch.png"
+                alt="Logo des Musikvereins"
+            /></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="MediaquerryEin">
-      <div class="images-wrapper">
-        <div class="image-right">
-          <a href="https://www.mgstw.ch/">
-            <img src="Logo_Starrkirch.png" alt="Logo des Musikvereins" />
+      <div class="MediaquerryEin">
+        <div class="images-wrapper">
+          <div class="image-right">
+            <a href="https://www.mgstw.ch/">
+              <img
+                id="fixedSizeImage"
+                src="Logo_Starrkirch.png"
+                alt="Logo des Musikvereins"
+              />
+            </a>
+          </div>
+          <div class="image-left">
+            <a href="https://www.mgdulliken.ch/">
+              <img
+                id="fixedSizeImage"
+                src="logo_Dulliken.png"
+                alt="Logo des Musikvereins"
+              />
+            </a>
+          </div>
+        </div>
+        <h1 id="titel">
+          Spielgemeinschaft <br />
+          Dulliken - Starrkirch-Wil
+        </h1>
+      </div>
+      <nav class="navigation">
+        <div class="hamburger-container">
+          <div class="hamburger"></div>
+        </div>
+        <!-- Hamburger Icon -->
+        <!-- Navigationsleiste -->
+        <ul class="nav-menu">
+          <li>
+            <a class="ButtonStyle active" href="index.html">Startseite</a>
+          </li>
+          <li>
+            <a class="ButtonStyle" href="https://www.mgstw.ch/" target="_blank"
+              >MG Starrkirch-Wil</a
+            >
+          </li>
+          <!-- Links zu den Webseiten der Vereine -->
+          <li>
+            <a
+              class="ButtonStyle"
+              href="https://www.mgdulliken.ch/"
+              target="_blank"
+              >MG Dulliken</a
+            >
+          </li>
+          <li>
+            <a class="ButtonStyle" href="aktuelles.html">Aktuelles</a>
+          </li>
+          <li>
+            <a class="ButtonStyle" href="impressum.html">Impressum</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="about">
+        <div id="BilderBereich">
+          <img src="bildekonzert.jpg" alt="" />
+          <img src="Bild3.jpg" alt="" />
+          <img src="image.jpg" alt="" />
+          <img src="Konzert22.jpg" alt="" />
+        </div>
+
+        <div id="WerSindWirText">
+          <h2 id="Überschrift">
+            Willkommen auf der Seite unserer Musikvereine aus Dulliken und
+            Starrkirch-Wil!
+          </h2>
+          <h3 id="Überschrift">Wer sind wir</h3>
+          <p id="Inhalt">
+            Seit den Gründungsjahren 1863 in Dulliken und 1918 in Starrkirch-Wil
+            teilen wir die Leidenschaft für die Blasmusik. Als Formation in
+            Harmoniebesetzung in der 3. Stärkeklasse bieten wir ein breites
+            Spektrum an Klängen, von traditionellen Blasmusikstücken bis hin zu
+            modernen Arrangements.
+          </p>
+          <p id="Inhalt">
+            Unser Ensemble setzt sich aus einer Vielfalt von Blasinstrumenten
+            zusammen, die von Holz- über Blechblasinstrumente bis hin zu
+            Rhythmusinstrumenten reichen. Unsere Mitglieder, insgesamt 22 an der
+            Zahl, sind zwischen 20 und 80 Jahren alt, was unseren Vereinen eine
+            aussergewöhnliche Dynamik und ein breites musikalisches Verständnis
+            verleiht.
+          </p>
+          <p id="Inhalt">
+            Ein besonderes Highlight ist unser junges Dirigentenpaar, das nicht
+            nur durch seine musikalische Expertise, sondern auch durch seine
+            militärische Ausbildung besticht. Diese einzigartige Kombination
+            bringt Disziplin, Präzision und Leidenschaft in unsere musikalische
+            Arbeit und prägt die Atmosphäre unserer Proben.
+          </p>
+          <p id="Inhalt">
+            Trotz unserer statutarischen Trennung haben wir uns 2016
+            entschieden, unsere Kräfte zu bündeln. Diese Entscheidung erlaubt es
+            uns, trotz der Herausforderungen, die das Aufrechterhalten kleiner
+            Vereine mit sich bringt, weiterhin mit Hingabe und Freude Musik zu
+            machen.
+          </p>
+          <p id="Inhalt">
+            Seitdem treten wir gemeinsam auf und gestalten unser Repertoire
+            gemeinsam, wobei wir den Probetag am Freitag (und zusätzlich am
+            Dienstag) nutzen, um unser musikalisches Zusammenspiel zu
+            perfektionieren und uns auf Auftritte vorzubereiten.
+          </p>
+          <p id="Inhalt">
+            Unsere Geschichte ist geprägt von Zusammenhalt, musikalischer
+            Leidenschaft und dem unermüdlichen Bestreben, die Tradition der
+            Blasmusik in unserer Region lebendig zu halten. Wir laden Sie
+            herzlich ein, Teil dieser wunderbaren musikalischen Reise zu werden.
+            Entdecken Sie mit uns die Freude am Musizieren und werden Sie Teil
+            unserer grossen musikalischen Familie.
+          </p>
+        </div>
+        <div id="Linkbereich">
+          <h2 id="LinklisteÜberschrift">Gemeinsame Ressourcen & MG-Links</h2>
+          <a href="https://www.mgstw.ch/verein/direktion" target="_blank"
+            >Direktion</a
+          >
+          <a
+            href="https://onedrive.live.com/?authkey=%21ANN8kP7XG4Wz0iE&id=1F7430E29EE3D07%2128600&cid=01F7430E29EE3D07"
+            target="_blank"
+            >SG-Fotoalbum (ab 2017)</a
+          >
+          <a href="JP_2024_Stand 2024-02-24.pdf" target="_blank"
+            >Jahresprogramm
           </a>
+          <a href="PP_2024-1_Stand 2024-01-14.pdf" target="_blank"
+            >Probenplan</a
+          >
+          <a href="https://www.mgstw.ch/sei-dabei/" target="_blank"
+            >Sei dabei!</a
+          >
+          <h2 id="LinklisteÜberschrift">Nützliche Links zu MG Dulliken</h2>
+          <a href="https://www.mgdulliken.ch/?page_id=173" target="_blank"
+            >Zum Vorstand</a
+          >
+          <a href="https://www.mgdulliken.ch/?page_id=9" target="_blank"
+            >Die Mitglieder</a
+          >
+
+          <a
+            href="https://www.facebook.com/groups/918759474884518/"
+            target="_blank"
+            ><i class="fab fa-facebook-square faceCon"></i>Facebook</a
+          >
+          <h2 id="LinklisteÜberschrift">
+            Nützliche Links zu MG Starrkirch-Wil
+          </h2>
+          <a href="https://www.mgstw.ch/verein" target="_blank">Vereinsinfo</a>
+
+          <a href="https://www.mgstw.ch/verein/vorstand/" target="_blank"
+            >Vorstand</a
+          >
+
+          <a href="https://www.mgstw.ch/kontakt/" target="_blank"
+            >Kontaktinfos</a
+          >
+          <a href="https://www.mgstw.ch/fotogalerie/" target="_blank"
+            >Fotogalerie</a
+          >
+          <a
+            href="https://www.facebook.com/groups/mgstw/?fref=ts"
+            target="_blank"
+            ><i class="fab fa-facebook-square faceCon"></i>Facebook</a
+          >
         </div>
-        <div class="image-left">
-          <a href="https://www.mgdulliken.ch/">
-            <img src="logo_Dulliken.png" alt="Logo des Musikvereins" />
-          </a>
-        </div>
-      </div>
-      <h1 id="titel">Spielgemeinschaft Dulliken und Starrkirch-Wil</h1>
+      </section>
+    </main>
+
+    <footer id="site-footer">
+      <p>
+        © Made by Andre Rätzel -
+        <a href="mailto:andrer11444@gmail.com">andrer11444@gmail.com</a>
+      </p>
+    </footer>
+
+    <div id="imgOverlay" class="overlay" onclick="closeImage()">
+      <img id="largeImg" src="" alt="Vergrößertes Bild" />
     </div>
-    <nav class="navigation">
-      <div class="hamburger-container">
-        <div class="hamburger"></div>
-      </div>
-      <!-- Hamburger Icon -->
-      <!-- Navigationsleiste -->
-      <ul class="nav-menu">
-        <li>
-          <a class="ButtonStyle active" href="index.html">Startseite</a>
-        </li>
-        <li>
-          <a class="ButtonStyle" href="https://www.mgstw.ch/" target="_blank">MG Starrkirch-Wil</a>
-        </li>
-        <!-- Links zu den Webseiten der Vereine -->
-        <li>
-          <a class="ButtonStyle" href="https://www.mgdulliken.ch/" target="_blank">MG Dulliken</a>
-        </li>
-        <li>
-          <a class="ButtonStyle" href="aktuelles.html">Aktuelles</a>
-        </li>
-        <li>
-          <a class="ButtonStyle" href="impressum.html">Impressum</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
 
-  <main id="main-content">
-    <section id="about">
-      <div id="BilderBereich">
-        <img src="bildekonzert.jpg" alt="" />
-        <img src="Bild3.jpg" alt="" />
-        <img src="image.jpg" alt="" />
-        <img src="Konzert22.jpg" alt="" />
-      </div>
-
-      <div id="WerSindWirText">
-        <h2 id="Überschrift">
-          Willkommen auf der Seite unserer Musikvereine aus Dulliken und
-          Starrkirch-Wil!
-        </h2>
-        <h3 id="Überschrift">Wer sind wir</h3>
-        <p id="Inhalt">
-          Seit den Gründungsjahren 1863 in Dulliken und 1918 in Starrkirch-Wil
-          teilen wir die Leidenschaft für die Blasmusik. Als Formation in
-          Harmoniebesetzung in der 3. Stärkeklasse bieten wir ein breites
-          Spektrum an Klängen, von traditionellen Blasmusikstücken bis hin
-          zu modernen Arrangements.
-        </p>
-        <p id="Inhalt">
-          Unser Ensemble setzt sich aus einer Vielfalt von Blasinstrumenten
-          zusammen, die von Holz- über Blechblasinstrumente bis hin zu
-          Rhythmusinstrumenten reichen. Unsere Mitglieder, insgesamt 22 an der
-          Zahl, sind zwischen 20 und 80 Jahren alt, was unseren Vereinen eine
-          aussergewöhnliche Dynamik und ein breites musikalisches Verständnis
-          verleiht.
-        </p>
-        <p id="Inhalt">
-          Ein besonderes Highlight ist unser junges Dirigentenpaar, das nicht
-          nur durch seine musikalische Expertise, sondern auch durch seine
-          militärische Ausbildung besticht. Diese einzigartige Kombination
-          bringt Disziplin, Präzision und Leidenschaft in unsere musikalische
-          Arbeit und prägt die Atmosphäre unserer Proben.
-        </p>
-        <p id="Inhalt">
-          Trotz unserer statutarischen Trennung haben wir uns 2016
-          entschieden, unsere Kräfte zu bündeln. Diese Entscheidung
-          erlaubt es uns, trotz der Herausforderungen, die das
-          Aufrechterhalten kleiner Vereine mit sich bringt, weiterhin mit
-          Hingabe und Freude Musik zu machen.
-        </p>
-        <p id="Inhalt">
-          Seitdem treten wir gemeinsam auf und gestalten unser Repertoire
-          gemeinsam, wobei wir den Probetag am Freitag (und zusätzlich am
-          Dienstag) nutzen, um unser musikalisches Zusammenspiel zu
-          perfektionieren und uns auf Auftritte vorzubereiten.
-        </p>
-        <p id="Inhalt">
-          Unsere Geschichte ist geprägt von Zusammenhalt, musikalischer
-          Leidenschaft und dem unermüdlichen Bestreben, die Tradition der
-          Blasmusik in unserer Region lebendig zu halten. Wir laden Sie
-          herzlich ein, Teil dieser wunderbaren musikalischen Reise zu werden.
-          Entdecken Sie mit uns die Freude am Musizieren und werden Sie Teil
-          unserer grossen musikalischen Familie.
-        </p>
-      </div>
-      <div id="Linkbereich">
-        <h2 id="LinklisteÜberschrift">Gemeinsame Ressourcen für unsere Musikvereine</h2>
-        <a href="https://onedrive.live.com/?authkey=%21ANN8kP7XG4Wz0iE&id=1F7430E29EE3D07%2128600&cid=01F7430E29EE3D07">SG-Fotoalbum
-          (ab 2017)</a>
-        <a href="JP_2024_Stand 2024-02-24.pdf">Jahresprogramm</a>
-        <a href="PP_2024-1_Stand 2024-01-14.pdf">Probenplan</a>
-        <a href="https://www.mgstw.ch/sei-dabei/">Sei dabei!</a>
-        <h2 id="LinklisteÜberschrift">Nützliche Links zu MG Dulliken</h2>
-        <a href="https://www.mgdulliken.ch/?page_id=173">Zum Vorstand</a>
-        <a href="https://www.mgdulliken.ch/?page_id=9">Die Mitglieder</a>
-        <a href="https://www.mgdulliken.ch/?page_id=48">Jahresprogramm</a>
-        <a href="https://www.mgdulliken.ch/?page_id=199">Probeplan</a>
-        <a href="https://www.facebook.com/groups/918759474884518/"><i
-            class="fab fa-facebook-square faceCon"></i>Facebook</a>
-        <h2 id="LinklisteÜberschrift">Nützliche Links zu MG Starrkirch-Wil</h2>
-        <a href="https://www.mgstw.ch/verein/">Vereinsinfo</a>
-        <a href="https://www.mgstw.ch/anl%C3%A4sse/">Anlässe</a>
-        <a href="https://www.mgstw.ch/kontakt/">Kontaktinfos</a>
-        <a href="https://www.mgstw.ch/fotogalerie/">Fotogalerie</a>
-        <a href="https://www.facebook.com/groups/mgstw/?fref=ts"><i
-            class="fab fa-facebook-square faceCon"></i>Facebook</a>
-
-      </div>
-    </section>
-  </main>
-
-  <footer id="site-footer">
-    <p>
-      © Made by Andre Rätzel -
-      <a href="mailto:andrer11444@gmail.com">andrer11444@gmail.com</a>
-    </p>
-  </footer>
-
-  <div id="imgOverlay" class="overlay" onclick="closeImage()">
-    <img id="largeImg" src="" alt="Vergrößertes Bild" />
-  </div>
-
-  <script src="MusikvereinJS.js"></script>
-</body>
-
+    <script src="MusikvereinJS.js"></script>
+  </body>
 </html>
