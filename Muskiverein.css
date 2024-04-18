@@ -440,10 +440,10 @@ body {
   /* Weiß mit 50% Transparenz */
   color: #e42222;
   /* Textfarbe */
-  padding: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 
   /* Fügt einen weichen Schatten hinzu */
-  margin-top: 20px;
 }
 
 /* ========================================Hier ist der Banner eingefügt========================================= */
